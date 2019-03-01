@@ -4,3 +4,4 @@ Part 1
 3. It will rotate.
 4. The bug leaves behind a flower.
 5. When the bug is at the edge of the grid, if it's facing towards the edge the bug will rotate to the right until an open path is available at which point it will move until something else gets in the bug's way.
+6.
