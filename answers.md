@@ -24,3 +24,6 @@ Degrees | Compass Direction
 2. The bug can be moved in any direction, within the bounds of the grid. When i try to move the bug outside fo the grid, an illegal argument exception shows up preventing the bug from moving.
 3. setColor(java.awt.Color)
 4. The bug goes poof.
+
+Part 2
+1. The sideLength is the length of the box that the bug makes + 1.
