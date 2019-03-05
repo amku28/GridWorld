@@ -9,6 +9,7 @@ Part 1
 8. The flower changes color each step once set from red until it's like a dark blue/black color. Once the bug overlaps the flower, the color turns red again and the process is restarted.
 9. No, it's just a rock.
 10. Yes, all the actors can be in the same location in the grid at the same time. However, if the bug is placed in the same place as a rock, the rock will be replaced with a flower.
+
 Exercises
 1. 
 Degrees | Compass Direction
@@ -25,5 +26,16 @@ Degrees | Compass Direction
 3. setColor(java.awt.Color)
 4. The bug goes poof.
 
+
 Part 2
 1. The sideLength is the length of the box that the bug makes + 1.
+2. The steps are used to count the amount of places the bug has traveled.
+3. The turn method is called twice because one turn of the bug turns the bug 45 degrees to the right while a full turn requires a 90 degree turn.
+4. The move function is able to be called because the BoxBug class extends the Bug class.
+5. No, we can control the size of the square pattern with an input into the constructor.
+6. No, it will always move North first, then East, then South, then West because the bug is defaulted to turn to the right. The only way to make it travel differently is to make it turn to the left through six turns rather than two.
+7. The value will be zero when the bug has finished one side of the square pattern.
+
+Exercises
+1. The CircleBug runs in circles rather than boxes.
+2. 
