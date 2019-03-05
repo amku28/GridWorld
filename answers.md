@@ -38,4 +38,5 @@ Part 2
 
 Exercises
 1. The CircleBug runs in circles rather than boxes.
-2. 
+5. To add another BoxBug to the actor grid, I would have to first construct it using the basic constructor: Boxbug name = new BoxBug(sidelength of box). After, if I wanted to, I can set the color using the method: name.setColor(Color.ORANGE). To put the bug on the grid, I call the method: world.add(new Location(x, y), name).
+
