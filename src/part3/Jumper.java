@@ -17,7 +17,9 @@
  */
 
 // package part2;
-
+import info.gridworld.actor.*;
+import info.gridworld.grid.Grid;
+import info.gridworld.grid.Location;
 import info.gridworld.actor.Bug;
 
 /**
@@ -26,16 +28,16 @@ import info.gridworld.actor.Bug;
  */
 public class Jumper extends Bug {
 	
-	private int sideLength;
+	private int steps;
 
 	/**
 	 * Constructs a box bug that traces a square of a given side length
 	 * 
-	 * @param length
+	  * @param length
 	 *            the side length
 	 */
 	public Jumper() {
-        
+        steps = 0;
 	}
 
 	/**
@@ -44,6 +46,8 @@ public class Jumper extends Bug {
 	public void act() {
 		if (canMove()) {
 			move();
+			move();
+			steps++;
 		} else {
 			turn90();
 		}
@@ -52,5 +56,25 @@ public class Jumper extends Bug {
     public void turn90() {
         turn();
         turn();
-    }
+	}
+	
+	public boolean canMove() {
+		Grid<Actor> gr = getGrid();
+		if (gr == null) {
+			return false;
+		}
+
+		Location loc = getLocation();
+		Location next = loc.getAdjacentLocation(getDirection());
+		Location next2 = next.getAdjacentLocation(getDirection());
+
+		if (!gr.isValid(next2)) {
+			return false;
+		} else if (!gr.isValid(next)) {
+			return false;
+		}
+
+		Actor neighbor = gr.get(next);
+		return (neighbor == null) || (neighbor instanceof Flower);
+	}
 }
