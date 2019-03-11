@@ -91,3 +91,14 @@ c. Yes it would need a color and direction
 d. No.
 e. canJump() & jump() & turn90();
 f. Test all scenarios.
+
+
+Part 4
+1. act(), getActors(), processActors(ArrayList<Actor> actors), getMoveLocations(), selectMoveLocation(ArrayList<Location> locs), makeMove(Location loc)
+2. getActors(), processActors(), getMoveLocations(), selectMoveLocation(), makeMove()
+3. Yes, if a critter can only see certain tiles it would be better if it can only process specific pieces of information.
+4. a) get a list of actors and run through a loop
+b) use comparison statements
+c) return booleans for specific actors.
+5. getMoveLocations(), selectMoveLocation(), makeMove()
+6. Critters don't have a constructor because critters don't use variables and just take in information around them.
