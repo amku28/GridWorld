@@ -97,8 +97,24 @@ Part 4
 1. act(), getActors(), processActors(ArrayList<Actor> actors), getMoveLocations(), selectMoveLocation(ArrayList<Location> locs), makeMove(Location loc)
 2. getActors(), processActors(), getMoveLocations(), selectMoveLocation(), makeMove()
 3. Yes, if a critter can only see certain tiles it would be better if it can only process specific pieces of information.
-4. a) get a list of actors and run through a loop
-b) use comparison statements
-c) return booleans for specific actors.
+4. a) It can eat it
+b) It can move to it's location
+c) It can change into its color
 5. getMoveLocations(), selectMoveLocation(), makeMove()
-6. Critters don't have a constructor because critters don't use variables and just take in information around them.
+6. Critters don't have a constructor because they extend the default constructor.
+
+1. It uses the information that is receieved in the other overrided methods therefore it is indirectly overrided. 
+2. Super calls to the origin of extension.
+3. To make a chameleon drop flowers, just add a flower.putselfingrid(gr, loc);
+4. Because it uses the same method to getActors and has no need for a personal method.
+5. Actor class
+6. Using the getGrid() method
+
+1. The crab critter uses the default processActors method.
+2. The crab processes actors that are in front of the crab critter and to its diagonal right and left locations. Any adjacent actors in these 3 locations will be eaten.
+3. To determine which direction and location to turn to.
+4. (4, 3) (4, 4) (4, 5)
+5. A similarity is that critters and crabs both turn in the direction they are moving before moving.
+A difference is that a crab will only move right or left.
+6. If the crab doesn't have any options to eat or move it will turn.
+7. Because the crab critter extends the critter class which will not allow the crab to eat another critter.
